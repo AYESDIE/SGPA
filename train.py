@@ -9,13 +9,14 @@ import torch.nn.functional as F
 import tensorflow as tf
 from lib.sgpa import SPGANet
 from lib.loss import *
-from data.pose_dataset import PoseDataset
+#from data.pose_dataset import PoseDataset
 from lib.utils import setup_logger, compute_sRT_errors
 from lib.align import estimateSimilarityTransform
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--dataset', type=str, default='CAMERA+Real', help='CAMERA or CAMERA+Real')
+#parser.add_argument('--dataset', type=str, default='CAMERA+Real', help='CAMERA or CAMERA+Real')
+parser.add_argument('--dataset', type=str, default='lmo', help='lmo')
 parser.add_argument('--data_dir', type=str, default='data', help='data directory')
 parser.add_argument('--n_pts', type=int, default=1024, help='number of foreground points')
 parser.add_argument('--n_cat', type=int, default=6, help='number of object categories')
